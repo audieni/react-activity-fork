@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Pokemon } from '../models/Pokemon';
-import { PokeAPI } from '../models/PokeAPI';
+import { Pokemon } from '../../models/Pokemon';
+import { PokeAPI } from '../../models/PokeAPI';
 import PokemonBox from '../PokemonBox/PokemonBox';
 import axios from 'axios';
 

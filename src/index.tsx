@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Counter from './components/counter/Counter';
-import { Pokemon } from './components/models/Pokemon';
+import { Pokemon } from './models/Pokemon';
 import PokemonList from './components/PokemonList/PokemonList';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
