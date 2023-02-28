@@ -3,13 +3,52 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Counter from './components/counter/Counter';
+import { Pokemon } from './components/models/Pokemon';
+import PokemonList from './components/PokemonList/PokemonList';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+let pokemon: Pokemon = {
+  name: 'Ditto',
+  level: 3,
+  health: 100,
+  damage: 20,
+  image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png'
+}
+
+let pokemonList: Pokemon[] = [
+  {
+    name: 'Ditto',
+    level: 3,
+    health: 100,
+    damage: 20,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png'
+  },
+  {
+    name: 'Pikachu',
+    level: 5,
+    health: 400,
+    damage: 10,
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'
+  }
+]
+
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={ <App /> } />
+        <Route path='/pokeList' element={ <PokemonList /> } />
+      </Routes>
+    </BrowserRouter>
+    {/* <Counter />
+    <App /> */}
   </React.StrictMode>
 );
 
